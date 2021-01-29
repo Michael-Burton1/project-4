@@ -7,15 +7,16 @@
    this.price = price;
  }
 
-
+toppingsArray= []
 
  // User logic
  $(document).ready(function() {
-    $("form#toppings-survey").submit(function(event) {
-      event.preventDefault();
-      $("input:checkbox[name=pizza_toppings]:checked").each(function() {
-        const allPizzaToppings= $(this).val();
+   $("form#toppings_survey").submit(function(event) {
+     event.preventDefault();
+     $("input:checkbox[name=pizza_toppings]:checked").each(function() {
+       const allPizzaToppings= $(this).val();
+      toppingsArray.push(allPizzaToppings)
+       console.log(allPizzaToppings);
       });
-      console.log(allPizzaToppings);
     });
   });
