@@ -1,4 +1,15 @@
 // Business logic
+//Logic for orders
+
+function Orders() {
+  this.pizzas = {};
+  this.currentID = 0;
+}
+
+Orders.prototype.addOrder= function(pizza){
+  pizzaID =this.assignID();
+  this.pizzas[pizza.id] = pizza;
+}
 // logic for pizzas
  function pizza(pizzaNum, toppings, size, price){
    this.pizzaNum = pizzaNum;
@@ -7,17 +18,14 @@
    this.price = price;
  }
 
- function Pizza() {
-   this.pizzas = {};
-   this.currentID = 0;
- }
 
-  pizza.prototype.assignId = function() {
-    this.currentId += 1;
-    return this.currentId;
-  }
+  // pizza.prototype.assignId = function() {
+  //   this.currentId += 1;
+  //   return this.currentId;
+  // }
 
-toppingsArray= []
+toppingsArray = []
+let toppingsTotalArray = toppingsArray.map();
 
  // User logic
  $(document).ready(function() {
@@ -28,5 +36,7 @@ toppingsArray= []
       toppingsArray.push(allPizzaToppings)
        console.log(allPizzaToppings);
       });
+      // toppingsArray.forEach(function(element) {
+      //   sum += element;
     });
   });
