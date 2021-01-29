@@ -25,7 +25,7 @@ Orders.prototype.addOrder= function(pizza){
   //   return this.currentId;
   // }
 
-  // let toppingsTotalArray = toppingsArray.map(Numbers);
+      
   
   // User logic
   toppingsArray = []
@@ -37,6 +37,7 @@ Orders.prototype.addOrder= function(pizza){
         toppingsArray.push(allPizzaToppings)
         let toppingsCost = toppingsArray.map((i) => Number(i));
         console.log("toppingscost", toppingsCost);
+
       //  console.log(allPizzaToppings);
       });
       // toppingsArray.forEach(function(element) {
