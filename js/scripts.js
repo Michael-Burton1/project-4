@@ -9,6 +9,7 @@ function Orders() {
 Orders.prototype.addOrder= function(pizza){
   pizzaID =this.assignID();
   this.pizzas[pizza.id] = pizza;
+  console.log(pizza);
 }
 // logic for pizzas
  function pizza(pizzaNum, toppings, size, price){
@@ -25,7 +26,7 @@ Orders.prototype.addOrder= function(pizza){
   // }
 
 toppingsArray = []
-let toppingsTotalArray = toppingsArray.map();
+// let toppingsTotalArray = toppingsArray.map(Numbers);
 
  // User logic
  $(document).ready(function() {
