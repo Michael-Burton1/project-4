@@ -9,7 +9,7 @@ function Orders() {
 Orders.prototype.addOrder= function(pizza){
   pizzaID =this.assignID();
   this.pizzas[pizza.id] = pizza;
-  console.log(pizza);
+  console.log(ugh);
 }
 // logic for pizzas
  function pizza(pizzaNum, toppings, size, price){
@@ -25,17 +25,19 @@ Orders.prototype.addOrder= function(pizza){
   //   return this.currentId;
   // }
 
-toppingsArray = []
-// let toppingsTotalArray = toppingsArray.map(Numbers);
-
- // User logic
- $(document).ready(function() {
-   $("form#toppings_survey").submit(function(event) {
-     event.preventDefault();
-     $("input:checkbox[name=pizza_toppings]:checked").each(function() {
-       const allPizzaToppings= $(this).val();
-      toppingsArray.push(allPizzaToppings)
-       console.log(allPizzaToppings);
+  // let toppingsTotalArray = toppingsArray.map(Numbers);
+  
+  // User logic
+  toppingsArray = []
+  $(document).ready(function() {
+    $("form#toppings_survey").submit(function(event) {
+      event.preventDefault();
+      $("input:checkbox[name=pizza_toppings]:checked").each(function() {
+        const allPizzaToppings= $(this).val();
+        toppingsArray.push(allPizzaToppings)
+        let toppingsCost = toppingsArray.map((i) => Number(i));
+        console.log("toppingscost", toppingsCost);
+      //  console.log(allPizzaToppings);
       });
       // toppingsArray.forEach(function(element) {
       //   sum += element;
