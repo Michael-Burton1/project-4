@@ -7,6 +7,16 @@
    this.price = price;
  }
 
+ function Pizza() {
+   this.pizzas = {};
+   this.currentID = 0;
+ }
+
+  pizza.prototype.assignId = function() {
+    this.currentId += 1;
+    return this.currentId;
+  }
+
 toppingsArray= []
 
  // User logic
