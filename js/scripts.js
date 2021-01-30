@@ -23,7 +23,7 @@ function Pizza(pizzaNum, toppings, size, price){
 
 Pizza.prototype.additonalCost= function(){
   let sum= 0;
-  toppingCost.forEach(function(element) {
+  toppingsCost.forEach(function(element) {
     sum +=element;
     console.log(sum)
     this.toppings.push(sum);
@@ -42,8 +42,9 @@ $(document).ready(function() {
       const allPizzaToppings= $(this).val();
       toppingsArray.push(allPizzaToppings)
       let toppingsCost = toppingsArray.map((i) => Number(i));
-      this.additionalCost();
-      console.log(AdditionalCost);
+      debugger
+      // .additionalCost();
+       console.log(toppingsCost);
 
     });
     
