@@ -29,6 +29,10 @@ _This is a webpage for a pizza parlor where the user an slect the size and toppi
 OR  
 * copy and paste this URL into your browser:  https://michael-burton1.github.io/project-2/
 
+## specifications
+```
+
+```
 ## Known Bugs
 
 *_no know bugs_
