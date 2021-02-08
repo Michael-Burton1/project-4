@@ -9,14 +9,21 @@
 </head>
 <body>
   <div class="container">
-    <form id="toppings_survey">
+    <form id="pizza_survey">
+      <h2>Select pizza size:</h2>
+      <label for="size">Size:</label>
+        <select id="inputsize" required>
+          <option></option>
+            <option value="8">Small</option>
+            <option value="12">Large</option> 
+        </select>
       <div class="form-group">
         <h2>What toppings would you like on your pizza:</h2>
         <p>
           <strong>Veggies:</strong>
         </p>
-        <input type="checkbox" name="pizza_toppings" value="1"> Artichoke<br>
-        <input type="checkbox" name="pizza_toppings" value="1"> Arugula<br>
+        <input type="checkbox" name="pizza_toppings" value=1> Artichoke<br>
+        <input type="checkbox" name="pizza_toppings" value=1> Arugula<br>
         <input type="checkbox" name="pizza_toppings" value="1"> Bell pepper<br>
         <input type="checkbox" name="pizza_toppings" value="1"> Black olives<br>
         <input type="checkbox" name="pizza_toppings" value="1"> Onions<br>

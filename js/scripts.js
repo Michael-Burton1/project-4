@@ -23,7 +23,7 @@ Pizza.prototype.additonalCost= function(){
 
 // User logic
 $(document).ready(function() {
-  $("form#toppings_survey").submit(function(event) {
+  $("form#pizza_survey").submit(function(event) {
     console.log("form sub");
     toppingsArray= []
     event.preventDefault();
@@ -59,3 +59,9 @@ $(document).ready(function() {
 //   this.pizzas[pizza.id] = pizza;
 //   console.log(ugh);
 // }
+
+
+let newArray= [];
+let toppingsArray = ["1", "2", "3"];
+newArray.push(parseInt(toppingsArray[2]));
+newArray;

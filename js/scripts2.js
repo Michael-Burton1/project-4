@@ -16,11 +16,16 @@ Pizza.prototype.total = function(){
   return totalCost
 };
 
-function arraySum(){  
-  let toppingsArray = [1,1,1];
+let toppingsArray = [];
+let newArray= []
+function arraySum(toppingsArray){  
   
   for (let i = 0; i < toppingsArray.length; i++); {
-    parseInt(toppingsArray);
+    newArray.push(parseInt(toppingsArray));    
+    
+    
+    console.log(newArray);
+
   };
   let toppingsCost = toppingsArray.reduce((a, b) => a + b, 0);
   return toppingsCost;
@@ -36,7 +41,8 @@ $(document).ready(function() {
     event.preventDefault();
     $("input:checkbox[name=pizza_toppings]:checked").each(function() {
       const allPizzaToppings= $(this).val();
-      toppingsArray.push(allPizzaToppings) 
+      toppingsArray.push(allPizzaToppings);
+       
       
     });
   });
