@@ -10,7 +10,6 @@ function Pizza(toppings, size, price){
 }
 
 Pizza.prototype.additonalCost= function(){
-  toppingsArray = []
   let sum= 0;
   toppingsCost.forEach(function(element) {
     sum += element;
