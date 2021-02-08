@@ -16,22 +16,38 @@ Pizza.prototype.total = function(){
   return totalCost
 };
 
-// Pizza.prototype.toppings= function(){
-//   let toppingsCost = this. toppingsCost.reduce((a, b) => a + b, 0);
-//   // debugger
-//   console.log(toppingsCost);
-//   return toppingsCost
-// }
+function arraySum(){  
+  let toppingsArray = [1,1,1];
+  
+  for (let i = 0; i < toppingsArray.length; i++); {
+    parseInt(toppingsArray);
+  };
+  let toppingsCost = toppingsArray.reduce((a, b) => a + b, 0);
+  return toppingsCost;
+};
 
+
+// user logic
 let Pizza1 = new Pizza();
 $(document).ready(function() {
   console.log("first pizza" +Pizza1);
   $("form#toppings_survey").submit(function(event) {
     console.log("form sub");
     event.preventDefault();
-   Pizza1.sizeCost = 5;
-   Pizza1.toppingsCost = 3;
-    // debugger
-    return Pizza1
+    $("input:checkbox[name=pizza_toppings]:checked").each(function() {
+      const allPizzaToppings= $(this).val();
+      toppingsArray.push(allPizzaToppings) 
+      
+    });
   });
 });
+
+
+
+
+
+// Pizza.prototype.toppings= function(){
+//   // debugger
+//   console.log(toppingsCost);
+//   return toppingsCost
+// }

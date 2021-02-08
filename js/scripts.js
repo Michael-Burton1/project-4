@@ -24,16 +24,16 @@ Pizza.prototype.additonalCost= function(){
 // User logic
 $(document).ready(function() {
   $("form#toppings_survey").submit(function(event) {
+    console.log("form sub");
     toppingsArray= []
     event.preventDefault();
     //make pizza object
     $("input:checkbox[name=pizza_toppings]:checked").each(function() {
       const allPizzaToppings= $(this).val();
       toppingsArray.push(allPizzaToppings)
-      let toppingsCost = toppingsArray.map((i) => Number(i));
-      debugger
+      // let toppingsCost = toppingsArray.map((i) => Number(i));
       // .additionalCost();
-      console.log(toppingsCost);
+      // console.log(toppingsCost);
       
     });
     
