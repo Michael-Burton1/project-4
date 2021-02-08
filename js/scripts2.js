@@ -36,15 +36,17 @@ function arraySum(toppingsArray){
 let Pizza1 = new Pizza();
 $(document).ready(function() {
   console.log("first pizza" +Pizza1);
-  $("form#toppings_survey").submit(function(event) {
+  $("form#pizza_survey").submit(function(event) {
     console.log("form sub");
     event.preventDefault();
     $("input:checkbox[name=pizza_toppings]:checked").each(function() {
       const allPizzaToppings= $(this).val();
       toppingsArray.push(allPizzaToppings);
-       
       
     });
+    Pizza1.sizeCost = parseInt(document.querySelector("select").value);
+    Pizza1.toppingsCost = 3;
+    return Pizza1;
   });
 });
 
